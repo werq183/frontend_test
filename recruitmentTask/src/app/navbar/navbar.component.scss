@@ -1,0 +1,54 @@
+$dark-grey: #0b0c10;
+$shadow: #303030;
+$text-color: #fff;
+$icon-hover-bg: #e88301;
+$font-family: 'Open Sans', sans-serif;
+
+
+.nav {
+  padding: 1rem 2rem;
+  background-color: $dark-grey;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo{
+    a{
+      color: $text-color;
+      text-decoration: none;
+      width: 6em;
+      height: 6em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%; // round shadow
+      background-color: $shadow;
+      transition: background-color 0.3s; // background hover animation
+
+      &:hover {
+        background-color: $icon-hover-bg;
+      }
+    }
+  }
+
+  &__title{
+    display: inline-block;
+    font-size: 2rem;
+
+    &--name {
+      display: none; // hidden name
+    }
+
+    &--bold {
+      font-weight: bold;
+    }
+
+    &:hover {
+      .nav__title--name {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
